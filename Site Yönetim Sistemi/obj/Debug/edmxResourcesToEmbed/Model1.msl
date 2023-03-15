@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="siteyonetimsistemiModelStoreContainer" CdmEntityContainer="siteyonetimsistemiEntities">
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="siteyonetimsistemiModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="siteyonetimsistemiModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="siteyonetimsistemiModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="siteyonetimsistemiModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="siteyonetimsistemiModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="siteyonetimsistemiModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="siteyonetimsistemiModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="siteyonetimsistemiModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="siteyonetimsistemiModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="aidatAys">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.aidatAy">
+        <MappingFragment StoreEntitySet="aidatAy">
+          <ScalarProperty Name="ay" ColumnName="ay" />
+          <ScalarProperty Name="aidatId" ColumnName="aidatId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aidatlars">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.aidatlar">
+        <MappingFragment StoreEntitySet="aidatlar">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ankets">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.anket">
+        <MappingFragment StoreEntitySet="anket">
+          <ScalarProperty Name="yoneticiId" ColumnName="yoneticiId" />
+          <ScalarProperty Name="anketKonusu" ColumnName="anketKonusu" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnketiGorenlers">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.AnketiGorenler">
+        <MappingFragment StoreEntitySet="AnketiGorenler">
+          <ScalarProperty Name="anketId" ColumnName="anketId" />
+          <ScalarProperty Name="uyeId" ColumnName="uyeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="anketSonuclaris">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.anketSonuclari">
+        <MappingFragment StoreEntitySet="anketSonuclari">
+          <ScalarProperty Name="kisiSayisi" ColumnName="kisiSayisi" />
+          <ScalarProperty Name="s5" ColumnName="s5" />
+          <ScalarProperty Name="s4" ColumnName="s4" />
+          <ScalarProperty Name="s3" ColumnName="s3" />
+          <ScalarProperty Name="s2" ColumnName="s2" />
+          <ScalarProperty Name="s1" ColumnName="s1" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="anketSorularis">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.anketSorulari">
+        <MappingFragment StoreEntitySet="anketSorulari">
+          <ScalarProperty Name="anketId" ColumnName="anketId" />
+          <ScalarProperty Name="soru" ColumnName="soru" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="apartmen">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.apartman">
+        <MappingFragment StoreEntitySet="apartman">
+          <ScalarProperty Name="aidat" ColumnName="aidat" />
+          <ScalarProperty Name="daireSayisi" ColumnName="daireSayisi" />
+          <ScalarProperty Name="apartmanYoneticisi" ColumnName="apartmanYoneticisi" />
+          <ScalarProperty Name="katSayisi" ColumnName="katSayisi" />
+          <ScalarProperty Name="apartmanBlok" ColumnName="apartmanBlok" />
+          <ScalarProperty Name="apartmanAdi" ColumnName="apartmanAdi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aracbilgisis">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.aracbilgisi">
+        <MappingFragment StoreEntitySet="aracbilgisi">
+          <ScalarProperty Name="aracSahibi" ColumnName="aracSahibi" />
+          <ScalarProperty Name="uyeId" ColumnName="uyeId" />
+          <ScalarProperty Name="plaka" ColumnName="plaka" />
+          <ScalarProperty Name="aracTipi" ColumnName="aracTipi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="daireSakinis">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.daireSakini">
+        <MappingFragment StoreEntitySet="daireSakini">
+          <ScalarProperty Name="yas" ColumnName="yas" />
+          <ScalarProperty Name="soyAd" ColumnName="soyAd" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="uyeId" ColumnName="uyeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dogalGazs">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.dogalGaz">
+        <MappingFragment StoreEntitySet="dogalGaz">
+          <ScalarProperty Name="odenme" ColumnName="odenme" />
+          <ScalarProperty Name="sonOdemeTarihi" ColumnName="sonOdemeTarihi" />
+          <ScalarProperty Name="faturaNo" ColumnName="faturaNo" />
+          <ScalarProperty Name="ay" ColumnName="ay" />
+          <ScalarProperty Name="yil" ColumnName="yil" />
+          <ScalarProperty Name="miktar" ColumnName="miktar" />
+          <ScalarProperty Name="faturaId" ColumnName="faturaId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="duyurulars">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.duyurular">
+        <MappingFragment StoreEntitySet="duyurular">
+          <ScalarProperty Name="yoneticiId" ColumnName="yoneticiId" />
+          <ScalarProperty Name="duyuruKonusu" ColumnName="duyuruKonusu" />
+          <ScalarProperty Name="duyurAdi" ColumnName="duyurAdi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elektriks">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.elektrik">
+        <MappingFragment StoreEntitySet="elektrik">
+          <ScalarProperty Name="odenme" ColumnName="odenme" />
+          <ScalarProperty Name="sonOdemeTarihi" ColumnName="sonOdemeTarihi" />
+          <ScalarProperty Name="faturaNo" ColumnName="faturaNo" />
+          <ScalarProperty Name="ay" ColumnName="ay" />
+          <ScalarProperty Name="yil" ColumnName="yil" />
+          <ScalarProperty Name="miktar" ColumnName="miktar" />
+          <ScalarProperty Name="faturaİd" ColumnName="faturaİd" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="faturas">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.fatura">
+        <MappingFragment StoreEntitySet="fatura">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gelenMesajs">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.gelenMesaj">
+        <MappingFragment StoreEntitySet="gelenMesaj">
+          <ScalarProperty Name="oncelik" ColumnName="oncelik" />
+          <ScalarProperty Name="gelenId" ColumnName="gelenId" />
+          <ScalarProperty Name="mesajId" ColumnName="mesajId" />
+          <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+          <ScalarProperty Name="gidenId" ColumnName="gidenId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guvenliks">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.guvenlik">
+        <MappingFragment StoreEntitySet="guvenlik">
+          <ScalarProperty Name="apartmanId" ColumnName="apartmanId" />
+          <ScalarProperty Name="telno" ColumnName="telno" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanicis">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.kullanici">
+        <MappingFragment StoreEntitySet="kullanici">
+          <ScalarProperty Name="kAdi" ColumnName="kAdi" />
+          <ScalarProperty Name="tipAdi" ColumnName="tipAdi" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="medeniDurum" ColumnName="medeniDurum" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="mailAdresi" ColumnName="mailAdresi" />
+          <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+          <ScalarProperty Name="dogumTarihi" ColumnName="dogumTarihi" />
+          <ScalarProperty Name="soyAd" ColumnName="soyAd" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mesajs">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.mesaj">
+        <MappingFragment StoreEntitySet="mesaj">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resimlers">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.resimler">
+        <MappingFragment StoreEntitySet="resimler">
+          <ScalarProperty Name="resim" ColumnName="resim" />
+          <ScalarProperty Name="resimAd" ColumnName="resimAd" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sus">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.su">
+        <MappingFragment StoreEntitySet="su">
+          <ScalarProperty Name="odenme" ColumnName="odenme" />
+          <ScalarProperty Name="sonOdemeTarihi" ColumnName="sonOdemeTarihi" />
+          <ScalarProperty Name="faturaNo" ColumnName="faturaNo" />
+          <ScalarProperty Name="ay" ColumnName="ay" />
+          <ScalarProperty Name="yil" ColumnName="yil" />
+          <ScalarProperty Name="miiktar" ColumnName="miiktar" />
+          <ScalarProperty Name="faturaId" ColumnName="faturaId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uyes">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.uye">
+        <MappingFragment StoreEntitySet="uye">
+          <ScalarProperty Name="aracId" ColumnName="aracId" />
+          <ScalarProperty Name="aracSayisi" ColumnName="aracSayisi" />
+          <ScalarProperty Name="daireNo" ColumnName="daireNo" />
+          <ScalarProperty Name="kat" ColumnName="kat" />
+          <ScalarProperty Name="apartmanId" ColumnName="apartmanId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="yoneticis">
+      <EntityTypeMapping TypeName="siteyonetimsistemiModel.yonetici">
+        <MappingFragment StoreEntitySet="yonetici">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

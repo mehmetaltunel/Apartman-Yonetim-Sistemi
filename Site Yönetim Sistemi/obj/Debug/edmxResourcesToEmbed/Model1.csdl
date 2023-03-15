@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="siteyonetimsistemiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="siteyonetimsistemiEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(siteyonetimsistemiModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(siteyonetimsistemiModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="aidatAys" EntityType="siteyonetimsistemiModel.aidatAy" />
+    <EntitySet Name="aidatlars" EntityType="siteyonetimsistemiModel.aidatlar" />
+    <EntitySet Name="ankets" EntityType="siteyonetimsistemiModel.anket" />
+    <EntitySet Name="AnketiGorenlers" EntityType="siteyonetimsistemiModel.AnketiGorenler" />
+    <EntitySet Name="anketSonuclaris" EntityType="siteyonetimsistemiModel.anketSonuclari" />
+    <EntitySet Name="anketSorularis" EntityType="siteyonetimsistemiModel.anketSorulari" />
+    <EntitySet Name="apartmen" EntityType="siteyonetimsistemiModel.apartman" />
+    <EntitySet Name="aracbilgisis" EntityType="siteyonetimsistemiModel.aracbilgisi" />
+    <EntitySet Name="daireSakinis" EntityType="siteyonetimsistemiModel.daireSakini" />
+    <EntitySet Name="dogalGazs" EntityType="siteyonetimsistemiModel.dogalGaz" />
+    <EntitySet Name="duyurulars" EntityType="siteyonetimsistemiModel.duyurular" />
+    <EntitySet Name="elektriks" EntityType="siteyonetimsistemiModel.elektrik" />
+    <EntitySet Name="faturas" EntityType="siteyonetimsistemiModel.fatura" />
+    <EntitySet Name="gelenMesajs" EntityType="siteyonetimsistemiModel.gelenMesaj" />
+    <EntitySet Name="guvenliks" EntityType="siteyonetimsistemiModel.guvenlik" />
+    <EntitySet Name="kullanicis" EntityType="siteyonetimsistemiModel.kullanici" />
+    <EntitySet Name="mesajs" EntityType="siteyonetimsistemiModel.mesaj" />
+    <EntitySet Name="resimlers" EntityType="siteyonetimsistemiModel.resimler" />
+    <EntitySet Name="sus" EntityType="siteyonetimsistemiModel.su" />
+    <EntitySet Name="sysdiagrams" EntityType="siteyonetimsistemiModel.sysdiagram" />
+    <EntitySet Name="uyes" EntityType="siteyonetimsistemiModel.uye" />
+    <EntitySet Name="yoneticis" EntityType="siteyonetimsistemiModel.yonetici" />
+    <AssociationSet Name="FK_aidatAy_aidatlar" Association="siteyonetimsistemiModel.FK_aidatAy_aidatlar">
+      <End Role="aidatlar" EntitySet="aidatlars" />
+      <End Role="aidatAy" EntitySet="aidatAys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aidatlar_uye" Association="siteyonetimsistemiModel.FK_aidatlar_uye">
+      <End Role="uye" EntitySet="uyes" />
+      <End Role="aidatlar" EntitySet="aidatlars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_anket_yonetici" Association="siteyonetimsistemiModel.FK_anket_yonetici">
+      <End Role="yonetici" EntitySet="yoneticis" />
+      <End Role="anket" EntitySet="ankets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnketiGorenler_anket" Association="siteyonetimsistemiModel.FK_AnketiGorenler_anket">
+      <End Role="anket" EntitySet="ankets" />
+      <End Role="AnketiGorenler" EntitySet="AnketiGorenlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_anketSonuclari_anket" Association="siteyonetimsistemiModel.FK_anketSonuclari_anket">
+      <End Role="anket" EntitySet="ankets" />
+      <End Role="anketSonuclari" EntitySet="anketSonuclaris" />
+    </AssociationSet>
+    <AssociationSet Name="FK_anketSorulari_anket" Association="siteyonetimsistemiModel.FK_anketSorulari_anket">
+      <End Role="anket" EntitySet="ankets" />
+      <End Role="anketSorulari" EntitySet="anketSorularis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_guvenlik_apartman" Association="siteyonetimsistemiModel.FK_guvenlik_apartman">
+      <End Role="apartman" EntitySet="apartmen" />
+      <End Role="guvenlik" EntitySet="guvenliks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_uye_apartman" Association="siteyonetimsistemiModel.FK_uye_apartman">
+      <End Role="apartman" EntitySet="apartmen" />
+      <End Role="uye" EntitySet="uyes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_aracbilgisi_daireSakini" Association="siteyonetimsistemiModel.FK_aracbilgisi_daireSakini">
+      <End Role="daireSakini" EntitySet="daireSakinis" />
+      <End Role="aracbilgisi" EntitySet="aracbilgisis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_daireSakini_uye1" Association="siteyonetimsistemiModel.FK_daireSakini_uye1">
+      <End Role="uye" EntitySet="uyes" />
+      <End Role="daireSakini" EntitySet="daireSakinis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dogalGaz_fatura" Association="siteyonetimsistemiModel.FK_dogalGaz_fatura">
+      <End Role="fatura" EntitySet="faturas" />
+      <End Role="dogalGaz" EntitySet="dogalGazs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_duyurular_yonetici" Association="siteyonetimsistemiModel.FK_duyurular_yonetici">
+      <End Role="yonetici" EntitySet="yoneticis" />
+      <End Role="duyurular" EntitySet="duyurulars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_elektrik_fatura" Association="siteyonetimsistemiModel.FK_elektrik_fatura">
+      <End Role="fatura" EntitySet="faturas" />
+      <End Role="elektrik" EntitySet="elektriks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_fatura_uye" Association="siteyonetimsistemiModel.FK_fatura_uye">
+      <End Role="uye" EntitySet="uyes" />
+      <End Role="fatura" EntitySet="faturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_su_fatura" Association="siteyonetimsistemiModel.FK_su_fatura">
+      <End Role="fatura" EntitySet="faturas" />
+      <End Role="su" EntitySet="sus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_gelenMesaj_mesaj" Association="siteyonetimsistemiModel.FK_gelenMesaj_mesaj">
+      <End Role="mesaj" EntitySet="mesajs" />
+      <End Role="gelenMesaj" EntitySet="gelenMesajs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_resimler_kullanici" Association="siteyonetimsistemiModel.FK_resimler_kullanici">
+      <End Role="kullanici" EntitySet="kullanicis" />
+      <End Role="resimler" EntitySet="resimlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_uye_kullanici" Association="siteyonetimsistemiModel.FK_uye_kullanici">
+      <End Role="kullanici" EntitySet="kullanicis" />
+      <End Role="uye" EntitySet="uyes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_yonetici_kullanici" Association="siteyonetimsistemiModel.FK_yonetici_kullanici">
+      <End Role="kullanici" EntitySet="kullanicis" />
+      <End Role="yonetici" EntitySet="yoneticis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_mesaj_uye" Association="siteyonetimsistemiModel.FK_mesaj_uye">
+      <End Role="uye" EntitySet="uyes" />
+      <End Role="mesaj" EntitySet="mesajs" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="aidatAy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="aidatId" Type="Int32" />
+    <Property Name="ay" Type="Int32" />
+    <NavigationProperty Name="aidatlar" Relationship="siteyonetimsistemiModel.FK_aidatAy_aidatlar" FromRole="aidatAy" ToRole="aidatlar" />
+  </EntityType>
+  <EntityType Name="aidatlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="aidatAys" Relationship="siteyonetimsistemiModel.FK_aidatAy_aidatlar" FromRole="aidatlar" ToRole="aidatAy" />
+    <NavigationProperty Name="uye" Relationship="siteyonetimsistemiModel.FK_aidatlar_uye" FromRole="aidatlar" ToRole="uye" />
+  </EntityType>
+  <EntityType Name="anket">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="anketKonusu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="yoneticiId" Type="Int32" />
+    <NavigationProperty Name="yonetici" Relationship="siteyonetimsistemiModel.FK_anket_yonetici" FromRole="anket" ToRole="yonetici" />
+    <NavigationProperty Name="AnketiGorenlers" Relationship="siteyonetimsistemiModel.FK_AnketiGorenler_anket" FromRole="anket" ToRole="AnketiGorenler" />
+    <NavigationProperty Name="anketSonuclari" Relationship="siteyonetimsistemiModel.FK_anketSonuclari_anket" FromRole="anket" ToRole="anketSonuclari" />
+    <NavigationProperty Name="anketSorularis" Relationship="siteyonetimsistemiModel.FK_anketSorulari_anket" FromRole="anket" ToRole="anketSorulari" />
+  </EntityType>
+  <EntityType Name="AnketiGorenler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uyeId" Type="Int32" />
+    <Property Name="anketId" Type="Int32" />
+    <NavigationProperty Name="anket" Relationship="siteyonetimsistemiModel.FK_AnketiGorenler_anket" FromRole="AnketiGorenler" ToRole="anket" />
+  </EntityType>
+  <EntityType Name="anketSonuclari">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="s1" Type="Int32" />
+    <Property Name="s2" Type="Int32" />
+    <Property Name="s3" Type="Int32" />
+    <Property Name="s4" Type="Int32" />
+    <Property Name="s5" Type="Int32" />
+    <Property Name="kisiSayisi" Type="Int32" />
+    <NavigationProperty Name="anket" Relationship="siteyonetimsistemiModel.FK_anketSonuclari_anket" FromRole="anketSonuclari" ToRole="anket" />
+  </EntityType>
+  <EntityType Name="anketSorulari">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="soru" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="anketId" Type="Int32" />
+    <NavigationProperty Name="anket" Relationship="siteyonetimsistemiModel.FK_anketSorulari_anket" FromRole="anketSorulari" ToRole="anket" />
+  </EntityType>
+  <EntityType Name="apartman">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="apartmanAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="apartmanBlok" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="katSayisi" Type="Int32" />
+    <Property Name="apartmanYoneticisi" Type="Int32" />
+    <Property Name="daireSayisi" Type="Int32" />
+    <Property Name="aidat" Type="Int32" />
+    <NavigationProperty Name="guvenliks" Relationship="siteyonetimsistemiModel.FK_guvenlik_apartman" FromRole="apartman" ToRole="guvenlik" />
+    <NavigationProperty Name="uyes" Relationship="siteyonetimsistemiModel.FK_uye_apartman" FromRole="apartman" ToRole="uye" />
+  </EntityType>
+  <EntityType Name="aracbilgisi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="aracTipi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="plaka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="uyeId" Type="Int32" />
+    <Property Name="aracSahibi" Type="Int32" />
+    <NavigationProperty Name="daireSakini" Relationship="siteyonetimsistemiModel.FK_aracbilgisi_daireSakini" FromRole="aracbilgisi" ToRole="daireSakini" />
+  </EntityType>
+  <EntityType Name="daireSakini">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uyeId" Type="Int32" />
+    <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="soyAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="yas" Type="Int32" />
+    <NavigationProperty Name="aracbilgisis" Relationship="siteyonetimsistemiModel.FK_aracbilgisi_daireSakini" FromRole="daireSakini" ToRole="aracbilgisi" />
+    <NavigationProperty Name="uye" Relationship="siteyonetimsistemiModel.FK_daireSakini_uye1" FromRole="daireSakini" ToRole="uye" />
+  </EntityType>
+  <EntityType Name="dogalGaz">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="faturaId" Type="Int32" />
+    <Property Name="miktar" Type="Int32" />
+    <Property Name="yil" Type="Int32" />
+    <Property Name="ay" Type="Int32" />
+    <Property Name="faturaNo" Type="Int32" />
+    <Property Name="sonOdemeTarihi" Type="DateTime" Precision="3" />
+    <Property Name="odenme" Type="Int32" />
+    <NavigationProperty Name="fatura" Relationship="siteyonetimsistemiModel.FK_dogalGaz_fatura" FromRole="dogalGaz" ToRole="fatura" />
+  </EntityType>
+  <EntityType Name="duyurular">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="duyurAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="duyuruKonusu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="yoneticiId" Type="Int32" />
+    <NavigationProperty Name="yonetici" Relationship="siteyonetimsistemiModel.FK_duyurular_yonetici" FromRole="duyurular" ToRole="yonetici" />
+  </EntityType>
+  <EntityType Name="elektrik">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="faturaİd" Type="Int32" />
+    <Property Name="miktar" Type="Int32" />
+    <Property Name="yil" Type="Int32" />
+    <Property Name="ay" Type="Int32" />
+    <Property Name="faturaNo" Type="Int32" />
+    <Property Name="sonOdemeTarihi" Type="DateTime" Precision="3" />
+    <Property Name="odenme" Type="Int32" />
+    <NavigationProperty Name="fatura" Relationship="siteyonetimsistemiModel.FK_elektrik_fatura" FromRole="elektrik" ToRole="fatura" />
+  </EntityType>
+  <EntityType Name="fatura">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="dogalGazs" Relationship="siteyonetimsistemiModel.FK_dogalGaz_fatura" FromRole="fatura" ToRole="dogalGaz" />
+    <NavigationProperty Name="elektriks" Relationship="siteyonetimsistemiModel.FK_elektrik_fatura" FromRole="fatura" ToRole="elektrik" />
+    <NavigationProperty Name="uye" Relationship="siteyonetimsistemiModel.FK_fatura_uye" FromRole="fatura" ToRole="uye" />
+    <NavigationProperty Name="sus" Relationship="siteyonetimsistemiModel.FK_su_fatura" FromRole="fatura" ToRole="su" />
+  </EntityType>
+  <EntityType Name="gelenMesaj">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="gidenId" Type="Int32" />
+    <Property Name="mesaj" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="mesajId" Type="Int32" />
+    <Property Name="gelenId" Type="Int32" />
+    <Property Name="oncelik" Type="Int32" />
+    <NavigationProperty Name="mesaj1" Relationship="siteyonetimsistemiModel.FK_gelenMesaj_mesaj" FromRole="gelenMesaj" ToRole="mesaj" />
+  </EntityType>
+  <EntityType Name="guvenlik">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Soyad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="telno" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="apartmanId" Type="Int32" />
+    <NavigationProperty Name="apartman" Relationship="siteyonetimsistemiModel.FK_guvenlik_apartman" FromRole="guvenlik" ToRole="apartman" />
+  </EntityType>
+  <EntityType Name="kullanici">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="soyAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dogumTarihi" Type="DateTime" Precision="3" />
+    <Property Name="cinsiyet" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="mailAdresi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="medeniDurum" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tipAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="kAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="resimler" Relationship="siteyonetimsistemiModel.FK_resimler_kullanici" FromRole="kullanici" ToRole="resimler" />
+    <NavigationProperty Name="uye" Relationship="siteyonetimsistemiModel.FK_uye_kullanici" FromRole="kullanici" ToRole="uye" />
+    <NavigationProperty Name="yonetici" Relationship="siteyonetimsistemiModel.FK_yonetici_kullanici" FromRole="kullanici" ToRole="yonetici" />
+  </EntityType>
+  <EntityType Name="mesaj">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="gelenMesajs" Relationship="siteyonetimsistemiModel.FK_gelenMesaj_mesaj" FromRole="mesaj" ToRole="gelenMesaj" />
+    <NavigationProperty Name="uye" Relationship="siteyonetimsistemiModel.FK_mesaj_uye" FromRole="mesaj" ToRole="uye" />
+  </EntityType>
+  <EntityType Name="resimler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="resimAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="resim" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="kullanici" Relationship="siteyonetimsistemiModel.FK_resimler_kullanici" FromRole="resimler" ToRole="kullanici" />
+  </EntityType>
+  <EntityType Name="su">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="faturaId" Type="Int32" />
+    <Property Name="miiktar" Type="Int32" />
+    <Property Name="yil" Type="Int32" />
+    <Property Name="ay" Type="Int32" />
+    <Property Name="faturaNo" Type="Int32" />
+    <Property Name="sonOdemeTarihi" Type="DateTime" Precision="3" />
+    <Property Name="odenme" Type="Int32" />
+    <NavigationProperty Name="fatura" Relationship="siteyonetimsistemiModel.FK_su_fatura" FromRole="su" ToRole="fatura" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="uye">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="apartmanId" Type="Int32" />
+    <Property Name="kat" Type="Int32" />
+    <Property Name="daireNo" Type="Int32" />
+    <Property Name="aracSayisi" Type="Int32" />
+    <Property Name="aracId" Type="Int32" />
+    <NavigationProperty Name="aidatlar" Relationship="siteyonetimsistemiModel.FK_aidatlar_uye" FromRole="uye" ToRole="aidatlar" />
+    <NavigationProperty Name="apartman" Relationship="siteyonetimsistemiModel.FK_uye_apartman" FromRole="uye" ToRole="apartman" />
+    <NavigationProperty Name="daireSakinis" Relationship="siteyonetimsistemiModel.FK_daireSakini_uye1" FromRole="uye" ToRole="daireSakini" />
+    <NavigationProperty Name="fatura" Relationship="siteyonetimsistemiModel.FK_fatura_uye" FromRole="uye" ToRole="fatura" />
+    <NavigationProperty Name="kullanici" Relationship="siteyonetimsistemiModel.FK_uye_kullanici" FromRole="uye" ToRole="kullanici" />
+    <NavigationProperty Name="mesaj" Relationship="siteyonetimsistemiModel.FK_mesaj_uye" FromRole="uye" ToRole="mesaj" />
+  </EntityType>
+  <EntityType Name="yonetici">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ankets" Relationship="siteyonetimsistemiModel.FK_anket_yonetici" FromRole="yonetici" ToRole="anket" />
+    <NavigationProperty Name="duyurulars" Relationship="siteyonetimsistemiModel.FK_duyurular_yonetici" FromRole="yonetici" ToRole="duyurular" />
+    <NavigationProperty Name="kullanici" Relationship="siteyonetimsistemiModel.FK_yonetici_kullanici" FromRole="yonetici" ToRole="kullanici" />
+  </EntityType>
+  <Association Name="FK_aidatAy_aidatlar">
+    <End Type="siteyonetimsistemiModel.aidatlar" Role="aidatlar" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.aidatAy" Role="aidatAy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aidatlar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="aidatAy">
+        <PropertyRef Name="aidatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aidatlar_uye">
+    <End Type="siteyonetimsistemiModel.uye" Role="uye" Multiplicity="1" />
+    <End Type="siteyonetimsistemiModel.aidatlar" Role="aidatlar" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="uye">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="aidatlar">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_anket_yonetici">
+    <End Type="siteyonetimsistemiModel.yonetici" Role="yonetici" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.anket" Role="anket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="yonetici">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="anket">
+        <PropertyRef Name="yoneticiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnketiGorenler_anket">
+    <End Type="siteyonetimsistemiModel.anket" Role="anket" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.AnketiGorenler" Role="AnketiGorenler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="anket">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AnketiGorenler">
+        <PropertyRef Name="anketId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_anketSonuclari_anket">
+    <End Type="siteyonetimsistemiModel.anket" Role="anket" Multiplicity="1" />
+    <End Type="siteyonetimsistemiModel.anketSonuclari" Role="anketSonuclari" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="anket">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="anketSonuclari">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_anketSorulari_anket">
+    <End Type="siteyonetimsistemiModel.anket" Role="anket" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.anketSorulari" Role="anketSorulari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="anket">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="anketSorulari">
+        <PropertyRef Name="anketId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_guvenlik_apartman">
+    <End Type="siteyonetimsistemiModel.apartman" Role="apartman" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.guvenlik" Role="guvenlik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apartman">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="guvenlik">
+        <PropertyRef Name="apartmanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_uye_apartman">
+    <End Type="siteyonetimsistemiModel.apartman" Role="apartman" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.uye" Role="uye" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apartman">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uye">
+        <PropertyRef Name="apartmanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_aracbilgisi_daireSakini">
+    <End Type="siteyonetimsistemiModel.daireSakini" Role="daireSakini" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.aracbilgisi" Role="aracbilgisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="daireSakini">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="aracbilgisi">
+        <PropertyRef Name="aracSahibi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_daireSakini_uye1">
+    <End Type="siteyonetimsistemiModel.uye" Role="uye" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.daireSakini" Role="daireSakini" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="uye">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="daireSakini">
+        <PropertyRef Name="uyeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dogalGaz_fatura">
+    <End Type="siteyonetimsistemiModel.fatura" Role="fatura" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.dogalGaz" Role="dogalGaz" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fatura">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="dogalGaz">
+        <PropertyRef Name="faturaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_duyurular_yonetici">
+    <End Type="siteyonetimsistemiModel.yonetici" Role="yonetici" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.duyurular" Role="duyurular" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="yonetici">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="duyurular">
+        <PropertyRef Name="yoneticiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_elektrik_fatura">
+    <End Type="siteyonetimsistemiModel.fatura" Role="fatura" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.elektrik" Role="elektrik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fatura">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="elektrik">
+        <PropertyRef Name="faturaİd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_fatura_uye">
+    <End Type="siteyonetimsistemiModel.uye" Role="uye" Multiplicity="1" />
+    <End Type="siteyonetimsistemiModel.fatura" Role="fatura" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="uye">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="fatura">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_su_fatura">
+    <End Type="siteyonetimsistemiModel.fatura" Role="fatura" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.su" Role="su" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fatura">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="su">
+        <PropertyRef Name="faturaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_gelenMesaj_mesaj">
+    <End Type="siteyonetimsistemiModel.mesaj" Role="mesaj" Multiplicity="0..1" />
+    <End Type="siteyonetimsistemiModel.gelenMesaj" Role="gelenMesaj" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mesaj">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="gelenMesaj">
+        <PropertyRef Name="mesajId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_resimler_kullanici">
+    <End Type="siteyonetimsistemiModel.kullanici" Role="kullanici" Multiplicity="1" />
+    <End Type="siteyonetimsistemiModel.resimler" Role="resimler" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="kullanici">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="resimler">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_uye_kullanici">
+    <End Type="siteyonetimsistemiModel.kullanici" Role="kullanici" Multiplicity="1" />
+    <End Type="siteyonetimsistemiModel.uye" Role="uye" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="kullanici">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="uye">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_yonetici_kullanici">
+    <End Type="siteyonetimsistemiModel.kullanici" Role="kullanici" Multiplicity="1" />
+    <End Type="siteyonetimsistemiModel.yonetici" Role="yonetici" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="kullanici">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="yonetici">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_mesaj_uye">
+    <End Type="siteyonetimsistemiModel.uye" Role="uye" Multiplicity="1" />
+    <End Type="siteyonetimsistemiModel.mesaj" Role="mesaj" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="uye">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="mesaj">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

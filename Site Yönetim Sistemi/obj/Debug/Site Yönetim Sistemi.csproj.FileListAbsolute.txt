@@ -1,0 +1,48 @@
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\Site Yönetim Sistemi.exe.config
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\Site Yönetim Sistemi.exe
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\Site Yönetim Sistemi.pdb
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site Yönetim Sistemi.csprojResolveAssemblyReference.cache
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.Form1.resources
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.Properties.Resources.resources
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site Yönetim Sistemi.csproj.GenerateResource.Cache
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site Yönetim Sistemi.exe
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site Yönetim Sistemi.pdb
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\EntityFramework.dll
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\EntityFramework.SqlServer.dll
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\EntityFramework.xml
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\EntityFramework.SqlServer.xml
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.uyecs.resources
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.yoneticics.resources
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.uyeekle.resources
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.Guncelle.resources
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.aracEkle.resources
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.daireSakiniEkle.resources
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.DaireSakiniGuncelle.resources
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.ayarlar.resources
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.AnketCevapla.resources
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.detayliBilgi.resources
+D:\Çalışmalarım\c#\Yapay Zeka\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.faturaOlustur.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\Site Yönetim Sistemi.exe.config
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site Yönetim Sistemi.exe
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site Yönetim Sistemi.pdb
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site Yönetim Sistemi.csprojResolveAssemblyReference.cache
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.AnketCevapla.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.aracEkle.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.ayarlar.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.daireSakiniEkle.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.DaireSakiniGuncelle.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.detayliBilgi.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.faturaOlustur.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.Form1.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.Guncelle.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.Properties.Resources.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.uyecs.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.uyeekle.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site_Yönetim_Sistemi.yoneticics.resources
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\obj\Debug\Site Yönetim Sistemi.csproj.GenerateResource.Cache
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\Site Yönetim Sistemi.exe
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\Site Yönetim Sistemi.pdb
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\EntityFramework.dll
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\EntityFramework.SqlServer.dll
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\EntityFramework.xml
+D:\Çalışmalarım\Bitirme Projesi\Site Yönetim Sistemi\Site Yönetim Sistemi\bin\Debug\EntityFramework.SqlServer.xml
